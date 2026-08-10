@@ -1,0 +1,123 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+/*
+ * Light-only design system for a chartered accountant's practice website.
+ * There is intentionally NO dark theme, no .dark block and no
+ * prefers-color-scheme handling. Every surface stays light.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--surface);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--surface);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--surface);
+  --color-accent-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--border-strong);
+  --color-ring: var(--primary);
+  --color-sidebar: var(--card);
+  --color-sidebar-foreground: var(--foreground);
+  --color-sidebar-primary: var(--primary);
+  --color-sidebar-primary-foreground: var(--primary-foreground);
+  --color-sidebar-accent: var(--surface);
+  --color-sidebar-accent-foreground: var(--foreground);
+  --color-sidebar-border: var(--border);
+  --color-sidebar-ring: var(--primary);
+
+  --shadow-soft: 0 1px 2px oklch(0.24 0.02 250 / 4%), 0 8px 24px -16px oklch(0.24 0.02 250 / 10%);
+  --shadow-nav: 0 1px 0 var(--border), 0 6px 20px -18px oklch(0.24 0.02 250 / 25%);
+}
+
+:root {
+  color-scheme: light only;
+  --radius: 0.25rem;
+
+  --background: oklch(0.986 0.004 95); /* warm white #FAFAF8 */
+  --surface: oklch(0.963 0.008 95); /* soft ivory #F5F4F0 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.245 0 0);
+  --foreground: oklch(0.245 0 0); /* deep charcoal #242424 */
+  --muted-foreground: oklch(0.535 0.004 260); /* muted grey #686868 */
+
+  --primary: oklch(0.435 0.062 246); /* muted professional blue */
+  --primary-foreground: oklch(0.995 0 0);
+  --primary-soft: oklch(0.94 0.018 246);
+
+  --gold: oklch(0.735 0.062 82); /* champagne gold, details only */
+  --gold-soft: oklch(0.9 0.035 85);
+
+  --border: oklch(0.905 0.006 95);
+  --border-strong: oklch(0.855 0.008 95);
+  --destructive: oklch(0.52 0.16 27);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+@utility gold-rule {
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+}
