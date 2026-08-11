@@ -1,4 +1,4 @@
-import { n as __toESM } from "../../_runtime.mjs";
+import { r as __toESM } from "../../_runtime.mjs";
 import { _ as require_react, c as Primitive, d as useLayoutEffect2, f as createSlot, g as require_jsx_runtime, h as require_react_dom, l as dispatchDiscreteCustomEvent, m as createContextScope, o as useId, p as useComposedRefs, s as Presence, u as useControllableState } from "./react-accordion+[...].mjs";
 import { t as composeEventHandlers } from "../radix-ui__primitive.mjs";
 import { __assign, __rest, __spreadArray } from "tslib";

@@ -1,4 +1,3 @@
-import { n as globalthis_default } from "../supabase__realtime-js+unenv.mjs";
 import { M as invariant, N as decodePath, S as getStylesheetHref, _ as GLOBAL_TSR, b as createInlineCssStyleAsset, j as createLRUCache, k as rootRouteId, v as TSR_SCRIPT_BARRIER_ID, y as createInlineCssPlaceholderAsset } from "./react-router+[...].mjs";
 //#region node_modules/seroval/dist/index.js
 var SYM_ASYNC_ITERATOR = Symbol.asyncIterator;
@@ -212,7 +211,7 @@ else if (typeof self !== "undefined") Object.defineProperty(self, REFERENCES_KEY
 	writable: false,
 	enumerable: false
 });
-else if (typeof globalthis_default !== "undefined") Object.defineProperty(globalthis_default, REFERENCES_KEY, {
+else if (typeof global !== "undefined") Object.defineProperty(global, REFERENCES_KEY, {
 	value: INV_REFERENCE,
 	configurable: true,
 	writable: false,

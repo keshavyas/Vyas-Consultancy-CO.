@@ -1,7 +1,6 @@
 import { t as createClient } from "../_libs/supabase__supabase-js.mjs";
 import { n as createCsrfMiddleware, r as createMiddleware } from "./server-BzU5_70-.mjs";
 import { t as renderErrorPage } from "./ssr.mjs";
-import processModule from "node:process";
 //#region node_modules/.nitro/vite/services/ssr/assets/start-qbl9FZIR.js
 function dedupeSerializationAdapters(deduped, serializationAdapters) {
 	for (let i = 0, len = serializationAdapters.length; i < len; i++) {
@@ -58,7 +57,7 @@ function createSupabaseClient() {
 		"VITE_SUPABASE_PROJECT_ID": "ypecgizhjqxkkegbydbs",
 		"VITE_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_x-Ye7-rBNl2CMAPZ4uDJmQ_gl8YzVR4",
 		"VITE_SUPABASE_URL": "https://ypecgizhjqxkkegbydbs.supabase.co"
-	}["VITE_SUPABASE_URL"] || processModule.env["SUPABASE_URL"];
+	}["VITE_SUPABASE_URL"] || process.env["SUPABASE_URL"];
 	const SUPABASE_PUBLISHABLE_KEY = {
 		"BASE_URL": "/",
 		"DEV": false,
@@ -75,7 +74,7 @@ function createSupabaseClient() {
 		"VITE_SUPABASE_PROJECT_ID": "ypecgizhjqxkkegbydbs",
 		"VITE_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_x-Ye7-rBNl2CMAPZ4uDJmQ_gl8YzVR4",
 		"VITE_SUPABASE_URL": "https://ypecgizhjqxkkegbydbs.supabase.co"
-	}["VITE_SUPABASE_PUBLISHABLE_KEY"] || processModule.env["SUPABASE_PUBLISHABLE_KEY"];
+	}["VITE_SUPABASE_PUBLISHABLE_KEY"] || process.env["SUPABASE_PUBLISHABLE_KEY"];
 	if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
 		const message = `Missing Supabase environment variable(s): ${[...!SUPABASE_URL ? ["SUPABASE_URL"] : [], ...!SUPABASE_PUBLISHABLE_KEY ? ["SUPABASE_PUBLISHABLE_KEY"] : []].join(", ")}. Connect Supabase in Lovable Cloud.`;
 		console.error(`[Supabase] ${message}`);

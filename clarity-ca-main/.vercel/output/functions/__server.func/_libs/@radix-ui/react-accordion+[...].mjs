@@ -1,6 +1,5 @@
-import { n as __toESM, t as __commonJSMin } from "../../_runtime.mjs";
+import { r as __toESM, t as __commonJSMin } from "../../_runtime.mjs";
 import { t as composeEventHandlers } from "../radix-ui__primitive.mjs";
-import processModule from "node:process";
 //#region node_modules/react/cjs/react.production.js
 /**
 * @license React
@@ -183,8 +182,8 @@ var require_react_production = /* @__PURE__ */ __commonJSMin(((exports) => {
 				error
 			});
 			if (!window.dispatchEvent(event)) return;
-		} else if ("object" === typeof processModule && "function" === typeof processModule.emit) {
-			processModule.emit("uncaughtException", error);
+		} else if ("object" === typeof process && "function" === typeof process.emit) {
+			process.emit("uncaughtException", error);
 			return;
 		}
 		console.error(error);
